@@ -9,9 +9,9 @@ export const auth = defineAuth({
       mutable: true,
       required: true,
     },
-    locale: {
+     givenName:  {
       mutable: true,
       required: true,
-    },
+     },
   },
 });
