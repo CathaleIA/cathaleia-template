@@ -1,6 +1,6 @@
 "use client"
 
-import Reacy, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import Link from "next/link";
 import {Button, Divider, Flex} from "@aws-amplify/ui-react";
 import {signOut} from "aws-amplify/auth";
@@ -47,8 +47,6 @@ export default function NavBar({isSignedIn}: {isSignedIn: boolean}) {
             loggedIn: true,
         }
     ];
-
-    const routes = defaultRoutes.filter((route) => route.loggedIn === authCheck || route.loggedIn === undefined);
 
     return (
         <>
