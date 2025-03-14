@@ -1,12 +1,10 @@
-
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import Auth from "@/components/auth/Auth"
+import Auth from "@/components/auth/Auth";
 import NavBar from "@/components/navbar/NavBar";
-import {isAthenticated} from "@/utils/amplify-utils";
+import { isAuthenticated } from "@/utils/amplify-utils";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,15 +26,12 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  const authBool = await isAthenticated();
+  const authBool = await isAuthenticated(); // authBool ahora es de tipo boolean
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Auth>
-          <NavBar isSignedIn={authBool}/>
+          <NavBar isSignedIn={authBool} /> {/* authBool ahora es de tipo boolean */}
           {children}
         </Auth>
       </body>
