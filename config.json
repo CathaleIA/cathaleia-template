@@ -1,0 +1,13 @@
+{
+    "credentials" : {
+        "username": "test",
+        "password": "Copower.2024@"
+    },
+    "aws": {
+        "region":"us-east-1"
+    },
+    "amplify": {
+        "userPoolId": "us-east-1_LhsMrWabu",
+        "userPoolClientId": "2a5mhkhelfdpjsessmhb4f4i7t"
+    }
+}
